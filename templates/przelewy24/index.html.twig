@@ -1,0 +1,41 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Hello Przelewy24Controller!{% endblock %}
+
+{% block body %}
+<style>
+    .example-wrapper { margin: 1em auto; max-width: 800px; width: 95%; font: 18px/1.5 sans-serif; }
+    .example-wrapper code { background: #F5F5F5; padding: 2px 6px; }
+</style>
+
+<div class="example-wrapper">
+    <h1>Hello {{ controller_name }}! ✅</h1>
+
+    This friendly message is coming from:
+    <ul>
+        <li>Your controller at <code><a href="{{ '/Users/tomaszciula/Projects/simple_shop/src/Controller/Przelewy24Controller.php'|file_link(0) }}">src/Controller/Przelewy24Controller.php</a></code></li>
+        <li>Your template at <code><a href="{{ '/Users/tomaszciula/Projects/simple_shop/templates/przelewy24/index.html.twig'|file_link(0) }}">templates/przelewy24/index.html.twig</a></code></li>
+    </ul>
+        <h1>Create payment order</h1>
+        <form action="https://secure.przelewy24.pl/trnRegister" method="post" class="form"> <input type="text" name="p24_session_id" value="SESSION_ID" />
+<input type="text" name="p24_merchant_id" value="221283" />
+<input type="text" name="p24_pos_id" value="221283" />
+<input type="text" name="p24_amount" value="1599" /> <input type="text" name="p24_currency" value="PLN" />
+<input type="text" name="p24_description" value="TYTUŁ" />
+<input type="text" name="p24_client" value="Jan Kowalski" /> <input type="text" name="p24_address" value="ul. Polska 33/33" /> <input type="text" name="p24_zip" value="66-777" />
+<input type="text" name="p24_city" value="Poznań" />
+<input type="text" name="p24_country" value="PL" />
+<input type="text" name="p24_email" value="cetex.tc@gmail.com" />
+<input type="text" name="p24_language" value="pl" />
+<input type="text" name="p24_url_return" value="http://localhost:8001" /> <input type="text" name="p24_api_version" value="3.2" />
+<input type="hidden" name="p24_sign" value="a19cc51d7ea9a9a30a39c7014831cd23" /> <input name="submit_send" value="wyślij" type="submit" />
+</form>
+
+    {# <form action="{{ path('payment_create') }}" method="get">
+        <label for="amount">Amount:</label>
+        <input type="text" name="amount" id="amount" value="1000">
+        <br>
+        <input type="submit" value="Pay">
+    </form> #}
+</div>
+{% endblock %}

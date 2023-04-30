@@ -1,3 +1,12 @@
 #index:
 #    path: /
 #    controller: App\Controller\DefaultController::index
+# payment_create:
+#     path: /przelewy24/create
+#     controller: App\Controller\Przelewy24Controller::createOrder
+#     methods: ['GET']
+
+# payment_confirm:
+#     path: /przelewy24/confirm
+#     controller: App\Controller\Przelewy24Controller::confirmPayment
+#     methods: ['GET']

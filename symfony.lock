@@ -114,8 +114,32 @@
     "nikic/php-parser": {
         "version": "v4.10.3"
     },
+    "nyholm/psr7": {
+        "version": "1.7",
+        "recipe": {
+            "repo": "github.com/symfony/recipes",
+            "branch": "main",
+            "version": "1.0",
+            "ref": "0cd4d2d0e7f646fda75f9944f747a56e6ed13d4c"
+        },
+        "files": [
+            "config/packages/nyholm_psr7.yaml"
+        ]
+    },
     "ocramius/proxy-manager": {
         "version": "2.2.3"
+    },
+    "payum/payum-bundle": {
+        "version": "2.5",
+        "recipe": {
+            "repo": "github.com/symfony/recipes-contrib",
+            "branch": "main",
+            "version": "2.4",
+            "ref": "518ac22defa04a8a1d82479ed362e2921487adf0"
+        },
+        "files": [
+            "config/packages/payum.yaml"
+        ]
     },
     "php": {
         "version": "7.3"
